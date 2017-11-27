@@ -1,12 +1,5 @@
 {
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\bash.exe",
-  "workbench.colorTheme": "Quiet Light for VSC",
-  "workbench.iconTheme": "vscode-icons",
-  "highlight-matching-tag.style": {
-    "backgroundColor": "#ffff66"
-  },
   "editor.tabSize": 2,
-  "editor.fontFamily": "'Inziu Iosevka SC', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
