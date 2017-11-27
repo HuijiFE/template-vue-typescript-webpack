@@ -1,4 +1,4 @@
-# Vue-TypeScript-Webpack
+# Template Vue TypeScript Webpack
 
 > A Webpack template base on TypeScript for Vue.js
 
@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# if Failed at the chromedriver@X.XX.X install script, try:
+# if Failed at the chromedriver@X.XX.X install: `node install.js`, try:
 npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
 
 # if Failed at node-sass@4.7.2 postinstall: `node scripts/build.js`, try the follow command and install again:
