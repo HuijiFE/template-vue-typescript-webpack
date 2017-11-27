@@ -11,10 +11,6 @@ const vueLoaderConfig = require('./vue-loader.config');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const publicPath =
-  process.env.NODE_ENV === 'production'
-    ? config.build.assetsPublicPath
-    : config.dev.assetsPublicPath;
 const urlLoaderLimit = config.common.urlLoaderLimit;
 
 const alias = {
@@ -28,9 +24,11 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: Object.assign({}, config.solution.commons, config.solution.entries),
   output: {
-    path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath,
+    path: config.build.assetsRoot,
+    publicPath: isProduction
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath,
   },
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json', '.scss'],
