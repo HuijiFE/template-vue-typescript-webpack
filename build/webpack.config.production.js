@@ -150,7 +150,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env,
     }),
+
     ...uglifyJsPlugin,
+
     // extract css into its own file
     new ExtractTextPlugin({
       filename: cssOutput,
@@ -160,12 +162,15 @@ const webpackConfig = merge(baseWebpackConfig, {
       allChunks: false,
     }),
     ...optimizeCSSPlugin,
+
     ...htmlWebpackPlugins,
+
     // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // enable scope hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
     // split vendor js into its own file
+
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function(module) {

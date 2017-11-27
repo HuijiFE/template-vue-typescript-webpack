@@ -4,7 +4,7 @@ const path = require('path');
 const solution = {
   // common chunks, all page apps will will use these modules.
   commons: {
-    style: './src/style.ts', // for bundle all style in one file.
+    style: './src/main.scss', // for bundle all style in one file.
   },
   entries: {
     main: './src/main.ts',

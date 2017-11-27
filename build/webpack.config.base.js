@@ -13,6 +13,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 const urlLoaderLimit = config.common.urlLoaderLimit;
 
+// reference path alias
 const alias = {
   src: resolve('src'),
 };
