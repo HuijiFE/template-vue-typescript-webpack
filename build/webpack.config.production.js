@@ -11,6 +11,9 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const utils = require('./utils');
 const config = require('../config');
 const baseWebpackConfig = require('./webpack.config.base');
+if (!config.build.productionVueRuntimeOnly) {
+  baseWebpackConfig.resolve.alias.vue$ = 'vue/dist/vue.esm.js';
+}
 
 const env =
   process.env.NODE_ENV === 'testing'

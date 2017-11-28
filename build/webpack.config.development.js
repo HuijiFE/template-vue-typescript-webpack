@@ -12,6 +12,8 @@ const utils = require('./utils');
 const config = require('../config');
 const baseWebpackConfig = require('./webpack.config.base');
 
+baseWebpackConfig.resolve.alias.vue$ = 'vue/dist/vue.esm.js';
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true }),
