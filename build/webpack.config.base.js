@@ -17,7 +17,7 @@ const urlLoaderLimit = config.common.urlLoaderLimit;
 const alias = {
   src: resolve('src'),
 };
-if (config.build.productionVueRuntimeOnly) {
+if (!config.build.productionVueRuntimeOnly) {
   alias.vue$ = 'vue/dist/vue.esm.js';
 }
 
