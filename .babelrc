@@ -14,7 +14,7 @@
   "plugins": ["transform-runtime"],
   "env": {
     "test": {
-      "presets": ["env", "stage-2"],
+      "presets": ["env", "stage-0", "stage-1", "stage-2", "stage-3", "es2015"],
       "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
     }
   }

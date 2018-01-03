@@ -19,13 +19,17 @@
     ],
     "module": "esnext",
     "moduleResolution": "node",
-    "target": "esnext",
+    "target": "es5",
     "outDir": "./dist/",
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "src": ["./src/*"]
+      "src": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "./src/**/*"
+  ]
 }
