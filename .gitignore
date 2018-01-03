@@ -1,9 +1,11 @@
 .DS_Store
 node_modules/
 /dist/
+/lib/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+debug.log
 /test/unit/coverage/
 /test/e2e/reports/
 selenium-debug.log
@@ -15,3 +17,5 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+
+.coveralls.yml
