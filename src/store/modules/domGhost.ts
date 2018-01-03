@@ -6,7 +6,7 @@ import { StateRoot } from '../index';
 export interface StateDomGhost {
   status: 'loading' | 'success' | 'failure';
   routePath: string;
-  ghostDocument: Document;
+  ghostDocument: HTMLElement;
 }
 
 export enum TypesDomGhost {
@@ -17,13 +17,13 @@ const domGhost: Module<StateDomGhost, StateRoot> = {
   state: {
     status: 'loading',
     routePath: '',
-    ghostDocument: document.implementation.createHTMLDocument(''),
+    ghostDocument: document.createElement('html'),
   },
   mutations: {
     [TypesDomGhost.updateGhost](state, payload: { routePath: string }) {
       state.routePath = payload.routePath;
       let data = document.documentElement.innerHTML;
-      state.ghostDocument.documentElement.innerHTML = data;
+      state.ghostDocument.innerHTML = data;
     },
   },
   actions: {
@@ -32,12 +32,12 @@ const domGhost: Module<StateDomGhost, StateRoot> = {
         status = 'loading';
         state.routePath = payload.routePath;
         let response = await axios.get(payload.routePath);
-        state.ghostDocument.documentElement.innerHTML = response.data;
+        state.ghostDocument.innerHTML = response.data;
       }
 
       if (payload.container) {
         Object.keys(payload.container).forEach(id => {
-          let element = state.ghostDocument.getElementById(id);
+          let element = state.ghostDocument.querySelector(`#${id}`);
           if (element) {
             payload.container[id] = element.innerHTML;
           }
