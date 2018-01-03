@@ -1,10 +1,10 @@
 {
   "editor.tabSize": 2,
-  "editor.fontLigatures": true,
-  "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
   "files.eol": "\n",
-  "auto-comment-blocks.slashStyleBlocks": ["scss"],
+  "auto-comment-blocks.slashStyleBlocks": [
+    "scss"
+  ],
   "css.validate": false,
   "beautify.language": {
     "js": {
@@ -12,8 +12,13 @@
       "filename": [],
       "ext": []
     },
-    "css": ["css", "less", "scss"],
-    "html": ["htm", "html", "mustache", "xml"]
+    "css": [],
+    "html": [
+      "htm",
+      "html",
+      "mustache",
+      "xml"
+    ]
   },
   "beautify.config": {
     "eol": "\n",
@@ -24,7 +29,11 @@
     "preserve_newlines": true,
     "brace_style": "collapse",
     "max_preserve_newlines": 2,
-    "extra_liners": ["head", "body", "/html"],
+    "extra_liners": [
+      "head",
+      "body",
+      "/html"
+    ],
     "indent_body_inner_html": true,
     "indent_inner_html": false,
     "indent_scripts": "separate",
@@ -37,12 +46,9 @@
     "space_before_conditional": true
   },
   "beautify.ignore": [
-    "**/extends.scss",
-    "**/extends/*.scss",
-    "**/mixins.scss",
+    "**/variables.scss",
     "**/normalize.css",
-    "**/reset.scss",
-    "**/variables.scss"
+    "**/reset.scss"
   ],
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatterOptions": {
@@ -55,7 +61,11 @@
       "preserve_newlines": true,
       "brace_style": "collapse",
       "max_preserve_newlines": 2,
-      "extra_liners": ["head", "body", "/html"],
+      "extra_liners": [
+        "head",
+        "body",
+        "/html"
+      ],
       "indent_body_inner_html": true,
       "indent_inner_html": false,
       "indent_scripts": "separate",
@@ -68,7 +78,7 @@
       "space_before_conditional": true
     }
   },
-  "prettier.cssEnable": [],
+  "prettier.disableLanguages": [],
   "prettier.printWidth": 90,
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
@@ -91,7 +101,11 @@
     "scss.validate": true
   },
   "eslint.enable": true,
-  "eslint.validate": ["javascript", "javascriptreact", "html"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html"
+  ],
   "eslint.options": {
     "configFile": ".eslintrc.js"
   },
